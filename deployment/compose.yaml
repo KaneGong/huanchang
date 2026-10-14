@@ -1,0 +1,50 @@
+services:
+  huanchang:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    restart: unless-stopped
+    environment:
+      HUANCHANG_PUBLIC_ORIGIN: https://your-domain.example
+      HUANCHANG_TRUSTED_PROXIES: 172.30.88.2/32
+      HUANCHANG_SMTP_HOST: ${HUANCHANG_SMTP_HOST:-}
+      HUANCHANG_SMTP_PORT: ${HUANCHANG_SMTP_PORT:-587}
+      HUANCHANG_MAIL_FROM: ${HUANCHANG_MAIL_FROM:-}
+      HUANCHANG_SMTP_USER: ${HUANCHANG_SMTP_USER:-}
+      HUANCHANG_SMTP_PASSWORD: ${HUANCHANG_SMTP_PASSWORD:-}
+      HUANCHANG_SMTP_TLS: ${HUANCHANG_SMTP_TLS:-starttls}
+    networks:
+      - huanchang-private
+    expose:
+      - "8790"
+    volumes:
+      - huanchang-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8790/healthz',timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  caddy:
+    image: caddy:2
+    networks:
+      huanchang-private:
+        ipv4_address: 172.30.88.2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - huanchang
+networks:
+  huanchang-private:
+    ipam:
+      config:
+        - subnet: 172.30.88.0/24
+volumes:
+  huanchang-data:
+  caddy-data:
+  caddy-config:

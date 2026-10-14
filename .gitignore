@@ -1,0 +1,16 @@
+work/
+app/uploads/*
+!app/uploads/.gitkeep
+__pycache__/
+*.pyc
+public/
+.venv/
+.vercel/
+.DS_Store
+
+# Local deployment/mail credentials
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example

@@ -1,0 +1,12 @@
+work/
+app/
+docs/
+tests/
+.github/
+PROJECT-STATUS.md
+.env
+.env.*
+outputs/hero-*/
+outputs/visual-directions-*/
+outputs/design-*/
+outputs/logo-*/

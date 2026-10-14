@@ -1,0 +1,7 @@
+# Replace this placeholder with a domain you control before deploying.
+your-domain.example {
+    request_body {
+        max_size 21MB
+    }
+    reverse_proxy huanchang:8790
+}

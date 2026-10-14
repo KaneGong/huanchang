@@ -1,0 +1,103 @@
+:root{--paper:#faf9f5;--ink:#25352e;--muted:#687168;--line:#dde1d5;--soft:#f0f2e8;--lime:#d5e5a5}
+/* Web palette inspired by Pantone Botanical / Clarify, not a spot-color conversion. */
+body:has(.hc-home.is-home-front){--paper:#faf9f5;--ink:#25352e;--muted:#687168;--line:#dde1d5;--soft:#f0f2e8;--lime:#d5e5a5;--home-moss:#52674c;--home-sage:#dfe5d4;--home-lilac:#b4aec3;background:var(--paper)}
+body:has(.hc-home.is-home-front) #header{background:#faf9f5f5}
+body:has(.hc-home.is-home-front) .dev-note{background:#f0f2e9;color:#687461}
+body:has(.hc-home.is-home-front) .button.lime{background:var(--lime);color:#25352e}
+body:has(.hc-home.is-home-front) .button.lime:hover{background:#c8d993}
+.hc-home.is-home-front{padding-top:28px}
+.is-home-front .home-intro{display:block;position:relative;margin:0 0 46px;padding:12px 0 36px;border-bottom:1px solid var(--line)}
+.home-intro-copy{min-width:0}
+.is-home-front .home-intro .eyebrow{display:flex;gap:12px;margin-bottom:18px;font-size:11px;letter-spacing:1px;color:var(--home-moss)}
+.home-wordmark{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:2.3px}
+.home-label-divider{width:20px;height:1px;display:block;background:#adb99b}
+.is-home-front .home-intro h1{font-family:"Songti SC","STSong","Noto Serif CJK SC",serif;font-size:clamp(34px,4.3vw,62px);font-weight:400;line-height:1.45;letter-spacing:.015em;color:var(--ink);text-wrap:balance}
+.home-intro h1>span{display:inline-block}.home-emphasis{color:var(--home-moss)}
+.is-home-front .home-intro .intro-subline{font-size:14px;font-weight:400;letter-spacing:.3px;color:#677165;line-height:1.85;margin-top:19px;max-width:650px;text-wrap:pretty}
+.home-intro .intro-subline>span{display:inline-block}
+.is-home-front .home-intro .home-searchbar{display:flex;width:100%;max-width:580px;height:56px;gap:13px;margin:24px 0 0;padding:0 6px 0 18px;border:1px solid #d9decf;border-radius:100px;background:#fffefa;box-shadow:0 4px 16px #2a392105;transition:border-color .2s,box-shadow .2s}
+.is-home-front .home-searchbar:focus-within{border-color:#657c52;outline:2px solid #b4c492;outline-offset:3px;box-shadow:0 4px 20px #34462709}
+.is-home-front .home-searchbar input[type=search]{font-size:13px;line-height:1.5;height:36px;outline:0;min-width:0}
+.is-home-front .home-searchbar input::placeholder{color:#82897b;opacity:1}
+.is-home-front .home-searchbar>.hc-icon{color:#768369;width:17px;height:17px}
+.is-home-front .home-searchbar button{height:44px;min-width:83px;padding:0 13px;display:flex;gap:10px;align-items:center;justify-content:center;flex:none;border-radius:100px;background:#edf1e1;color:#33472c;font-size:12px;font-weight:500;transition:background .2s,color .2s}
+.is-home-front .home-searchbar button .hc-icon{height:15px;width:15px;transition:transform .2s}
+.is-home-front .home-searchbar button:hover{background:#dbe6bf}.is-home-front .home-searchbar button:hover .hc-icon{transform:translateX(2px)}
+.is-home-front .theme-section{margin-bottom:42px}
+.is-home-front .theme-section .section-heading{margin-bottom:16px}.is-home-front .theme-section .section-heading h2{font-weight:500;font-size:16px;letter-spacing:.3px}
+.is-home-front .section-heading>span{font-size:11px;color:#737c6d;letter-spacing:.3px}
+.is-home-front .theme-grid{gap:26px}.is-home-front .theme-art{height:138px;border-radius:8px;background:#edece3}
+.is-home-front .theme-art img{transition:transform .65s cubic-bezier(.22,1,.36,1)}.is-home-front .theme-entry:hover img{transform:scale(1.035)}
+.is-home-front .theme-caption{padding-top:12px}.is-home-front .theme-caption h3{font-weight:500;font-size:15px;letter-spacing:.25px}.is-home-front .theme-caption p{font-size:12px;color:#6d7667;margin-top:4px;line-height:1.7}
+.is-home-front .theme-caption>.hc-icon{color:#6f815d;height:16px;width:16px;transition:transform .2s}.is-home-front .theme-entry:hover .theme-caption>.hc-icon{transform:translateX(3px)}
+.is-home-front .theme-text{background:#eeeee4}.is-home-front .theme-text strong{font-weight:400}
+.is-home-front .discovery-heading{margin-bottom:18px}.is-home-front .discovery-heading h2{font-weight:500;font-size:19px;letter-spacing:.2px}.is-home-front .discovery-heading>span{font-size:11px;color:#737c6d}
+.is-home-front .home-toolbar{padding-bottom:16px;border-color:var(--line);margin-bottom:26px}
+.is-home-front .home-filters{gap:7px}.is-home-front .home-filter{font-size:12px;min-height:44px;padding:7px 16px;font-weight:400;color:#66745e;transition:background .2s,color .2s}
+.is-home-front .home-filter[aria-pressed=true]{background:#e3eacb;color:#34482a;font-weight:500}
+.is-home-front .home-filter:hover{background:#edf0e2;color:#34482a}.is-home-front .home-sort button{font-size:11px;color:#6a7562}.is-home-front .home-sort button[aria-pressed=true]{color:#364c2d;border-color:#94a672;font-weight:500}
+.is-home-front .hc-art{border-radius:9px;background:#edf0e4}
+.is-home-front .hc-caption{padding-top:14px}.is-home-front .hc-caption h3{font-size:16px;font-weight:500;line-height:1.6;letter-spacing:.2px}
+.is-home-front .byline{margin-top:8px;gap:8px}.is-home-front .byline .author-name{font-size:12px;color:#59694f}.is-home-front .byline .author-direction{font-size:11px;color:#697261}
+.is-home-front .sample-tag{color:#79836e}
+.is-home-front .curation{font-size:12px;color:#67715e;line-height:1.85;border-left-color:#cbd8b2;margin-top:13px;padding-left:11px}.is-home-front .curation>span{font-size:10px;color:#60744f;letter-spacing:.3px}
+.is-home-front .hc-paper{background:#eeeede}.is-home-front .hc-paper h2{font-weight:400;font-size:27px;color:#343d2d}.is-home-front .hc-paper p{color:#5d6954}
+.is-home-front .hc-editorial{padding-top:42px;gap:52px}.is-home-front .hc-editorial h2{font-weight:400;font-size:32px;line-height:1.7;letter-spacing:.2px}.is-home-front .hc-editorial p:not(.eyebrow){font-size:14px;line-height:1.9;color:#6a7463}
+.is-home-front .hc-card .hc-art>img{transition:transform .6s cubic-bezier(.22,1,.36,1),filter .3s}.is-home-front .hc-art:hover>img{transform:scale(1.025);filter:brightness(.985)}
+@media(max-width:1150px){.is-home-front .home-intro{grid-template-columns:minmax(0,1fr) 125px;column-gap:32px}.is-home-front .theme-art{height:125px}}
+@media(max-width:850px){.is-home-front .home-intro{padding-bottom:28px}.is-home-front .home-intro .home-searchbar{max-width:100%}.is-home-front .theme-art{height:105px}.is-home-front .home-intro .intro-subline{font-size:13px}.is-home-front .theme-caption h3{font-size:14px}.is-home-front .theme-caption p{font-size:11px}}
+@media(max-width:700px){
+ .hc-home.is-home-front{padding-top:24px}.is-home-front .home-intro{display:block;margin:0 0 28px;padding:0 0 27px}
+ .is-home-front .home-intro .eyebrow{font-size:10px;gap:10px;margin-bottom:17px;letter-spacing:.3px}.home-wordmark{font-size:9px;letter-spacing:1.8px}.home-label-divider{width:13px}
+ .is-home-front .home-intro h1{font-size:clamp(30px,8.3vw,42px);letter-spacing:.035em;line-height:1.5}.home-intro h1>span{display:block}
+ .is-home-front .home-intro .intro-subline{font-size:13px;line-height:1.9;margin:12px 0 22px;letter-spacing:0}.is-home-front .home-intro .home-searchbar{height:52px;padding-left:15px;gap:10px;max-width:100%}.is-home-front .home-searchbar input[type=search]{font-size:12px}.is-home-front .home-searchbar button{min-width:68px;height:44px;padding:0 11px;gap:5px;font-size:11px}.is-home-front .home-searchbar button .hc-icon{width:13px;height:13px}
+ .is-home-front .theme-section{margin-bottom:29px}.is-home-front .theme-section .section-heading{margin-bottom:12px}.is-home-front .theme-section .section-heading h2{font-size:14px}.is-home-front .section-heading>span{font-size:10px;letter-spacing:0}
+ .is-home-front .theme-grid{gap:12px}.is-home-front .theme-art{height:85px;border-radius:5px}.is-home-front .theme-caption{padding-top:9px}.is-home-front .theme-caption h3{font-size:12px}.is-home-front .theme-caption p{font-size:10px;line-height:1.7;margin-top:4px}.is-home-front .theme-caption>.hc-icon{display:none}.is-home-front .theme-text{padding:10px}.is-home-front .theme-text small{font-size:7px}.is-home-front .theme-text strong{font-size:14px;line-height:1.6}.is-home-front .theme-text p{display:none}
+ .is-home-front .discovery-heading{margin-bottom:11px}.is-home-front .discovery-heading h2{font-size:17px}.is-home-front .home-toolbar{padding-bottom:14px;margin-bottom:22px;gap:13px}.is-home-front .home-filters{gap:3px}.is-home-front .home-filter{padding:6px 11px;min-height:44px;font-size:11px}
+ .is-home-front .hc-caption h3{font-size:14px;line-height:1.65}.is-home-front .hc-caption{padding-top:11px}.is-home-front .byline .author-name{font-size:11px}.is-home-front .byline .author-direction{font-size:10px}.is-home-front .curation{font-size:11px;margin-top:11px;line-height:1.85}.is-home-front .curation>span{font-size:9px}
+ .is-home-front .hc-editorial{gap:23px;padding-top:30px}.is-home-front .hc-editorial h2{font-size:27px}.is-home-front .hc-editorial p:not(.eyebrow){font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.is-home-front *,.is-home-front *:before,.is-home-front *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.hc-home[data-motion=reduced] *{animation:none!important;transition:none!important}
+
+/* Keep sorting with the stream title; format chips remain a single clear task. */
+.theme-note-narrow{display:none!important}
+.is-home-front .home-stream-meta{display:flex;align-items:center;gap:22px;color:#687561;font-size:11px}
+.is-home-front .home-stream-meta .home-sort{display:flex;gap:13px;padding:0;align-items:center}
+.is-home-front .home-stream-meta .home-sort button{min-height:44px;padding:8px 0;border-radius:0}
+@media(max-width:700px){
+ .is-home-front .theme-grid{display:grid;grid-template-columns:repeat(3,155px);overflow-x:auto;gap:12px;scroll-snap-type:x proximity;scrollbar-width:none;padding-bottom:2px}
+ .is-home-front .theme-grid::-webkit-scrollbar{display:none}.is-home-front .theme-entry{min-width:0;scroll-snap-align:start}
+ .is-home-front .theme-note-wide{display:none}.is-home-front .theme-note-narrow{display:inline-flex!important}
+ .is-home-front .theme-section{margin-bottom:24px}.is-home-front .theme-caption p{font-size:11px}.is-home-front .theme-art{height:90px}
+ .is-home-front .home-stream-meta{gap:13px;font-size:10px}.is-home-front .home-stream-meta .home-sort{gap:10px}
+ .is-home-front .discovery-heading{gap:14px;align-items:center;margin-bottom:4px}
+ .is-home-front .home-toolbar{margin-bottom:20px;gap:0}
+}
+@media(max-width:380px){.is-home-front .home-stream-meta>span{display:none}}
+
+@media(max-width:700px){.is-home-front .theme-text strong{font-size:13px;letter-spacing:0;text-wrap:balance}}
+
+/* Topic tiles name a direction; reading excerpts belong in the work stream. */
+.is-home-front .theme-text p{display:none}
+
+/* Accepted free starlight V5, standard strength. Layers never intercept input. */
+.home-letter{display:inline-block;opacity:1;filter:none;transform:none}
+.home-intro-copy{position:relative;isolation:isolate;padding:19px 0 23px}
+.home-starlight-material{position:absolute;inset:-20px -20px -4px;z-index:-1;pointer-events:none;overflow:hidden;border-radius:16px}
+.home-starlight-layer{position:absolute;inset:-20px -20px -4px;z-index:1;pointer-events:none;overflow:hidden}
+.home-starlight-material canvas,.home-starlight-particles{display:block;width:100%;height:100%}
+.is-home-front.starlight-ready .home-intro h1 .home-letter{color:transparent}
+.is-home-front .home-intro h1{font-size:clamp(38px,5.1vw,73px);line-height:1.48;letter-spacing:.02em}
+.is-home-front .home-intro .eyebrow{margin-bottom:22px}
+.is-home-front .home-intro .intro-subline{margin-top:21px}
+.is-home-front .home-intro .home-searchbar{margin-top:4px}
+@media(max-width:700px){
+ .home-intro-copy{padding:12px 0 21px}
+ .home-starlight-material,.home-starlight-layer{inset:-12px -12px -4px}
+ .is-home-front .home-intro h1{font-size:clamp(32px,9.4vw,46px);line-height:1.6;letter-spacing:.025em}
+ .is-home-front .home-intro .eyebrow{margin-bottom:17px}
+ .is-home-front .home-intro .intro-subline{margin:13px 0 0}
+ .is-home-front .home-intro .home-searchbar{margin-top:4px}
+}
+[data-motion=reduced] .home-starlight-material,[data-motion=reduced] .home-starlight-layer{display:none}
