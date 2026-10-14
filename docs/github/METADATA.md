@@ -1,6 +1,6 @@
 # GitHub 项目发布资料
 
-建议仓库名：`huanchang`。展示名称：**幻场 / HUANCHANG**。账号连接已确认KaneGong；当前未创建仓库。
+仓库：`KaneGong/huanchang`（已公开发布）。展示名称：**幻场 / HUANCHANG**。源码使用权按RIGHTS.md保留。
 
 About描述：
 

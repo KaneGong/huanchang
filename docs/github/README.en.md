@@ -91,7 +91,7 @@ Warm off-white, deep green and restrained lime accents frame a flexible work wal
 
 ## Status
 
-The local foundation has completed its current acceptance pass. The Vercel and Supabase adapter has passed its initial local regression; real cloud configuration and deployment acceptance are pending. The website currently has a Chinese interface. This repository introduction is bilingual.
+The local foundation has completed its current acceptance pass. The Vercel and Supabase adapter has passed its initial local regression; the preview database and private image bucket have been created, while Vercel configuration and deployment acceptance are in progress. The website currently has a Chinese interface. This repository introduction is bilingual.
 
 ## Run and deploy
 
