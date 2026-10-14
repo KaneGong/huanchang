@@ -23,3 +23,10 @@ class PasswordConfiguration(unittest.TestCase):
             app=create_app(storage=object(),origin="https://example.test")
             app.extensions["huanchang_runtime"].database()
             self.assertEqual(connection.call_args.args[0],base)
+
+    def test_preview_alias_is_explicit_and_production_ignores_it(self):
+        values={"HUANCHANG_DATABASE_URL":"postgresql://user@pooler.example:6543/postgres?sslmode=require","VERCEL_URL":"unique.example.test","HUANCHANG_PREVIEW_ORIGIN":"https://preview.example.test","HUANCHANG_PUBLIC_ORIGIN":"https://production.example.test"}
+        for environment,expected in [("preview","https://preview.example.test"),("production","https://production.example.test")]:
+            with self.subTest(environment=environment), patch.dict(os.environ,{**values,"VERCEL_ENV":environment}):
+                app=create_app(storage=object())
+                self.assertEqual(app.extensions["huanchang_runtime"].public_origin,expected)

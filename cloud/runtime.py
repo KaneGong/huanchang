@@ -92,7 +92,7 @@ def create_app(database=None,storage=None,origin=None,mail_sender=None,testing=F
     def too_large(error):return {'error':'提交内容太大，请刷新页面后使用授权图片上传。'},413
     if origin is None:
         preview=os.getenv('VERCEL_URL','') if os.getenv('VERCEL_ENV')=='preview' else ''
-        origin='https://'+preview if preview else os.getenv('HUANCHANG_PUBLIC_ORIGIN','')
+        origin=(os.getenv('HUANCHANG_PREVIEW_ORIGIN','') or 'https://'+preview) if preview else os.getenv('HUANCHANG_PUBLIC_ORIGIN','')
     parsed=urlsplit(origin);runtime=None
     try:
         if not (parsed.scheme==('http' if testing else 'https') and parsed.hostname and not parsed.username and parsed.path in ['','/'] and not parsed.query and not parsed.fragment):raise ValueError('Public origin missing')
