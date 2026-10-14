@@ -16,7 +16,7 @@
 
 1. 在Supabase选择区域，创建项目；使用新环境执行`cloud/schema.sql`。数据库地址使用控制台Connect给出的事务池地址，开启TLS。不要凭区域名称猜地址。
 2. 设置私有图片桶，允许JPG/PNG/WebP，桶单文件上限20 MB。服务器密钥仅保存在Vercel的私有环境设置中。
-3. 按`.env.cloud.example`填环境变量；Preview与Production使用独立数据与图片桶。预览站点来源使用Vercel提供的VERCEL_URL；生产站点使用明确的HUANCHANG_PUBLIC_ORIGIN。Cookie为Secure/HttpOnly/__Host前缀，示例登录关闭。
+3. 按`.env.cloud.example`填环境变量；数据库地址可以不包含密码，将密码单独填入Secret变量`HUANCHANG_DATABASE_PASSWORD`，服务端自动编码特殊符号。也兼容原有包含密码的完整URI。Preview与Production使用独立数据与图片桶。预览站点来源使用Vercel提供的VERCEL_URL；生产站点使用明确的HUANCHANG_PUBLIC_ORIGIN。Cookie为Secure/HttpOnly/__Host前缀，示例登录关闭。
 4. 连接GitHub发布仓库。识别Flask框架和pyproject入口，构建执行`python scripts/build_vercel.py`。先部署Preview，完整验证后再发布Production。
 5. 决定正式站从空数据开始，还是导入指定的本机试用内容。先执行`scripts/cloud_data_plan.py`进行只读盘点；账户、私信、邮箱和图片转移范围需明确，不自动上传现有本机数据。历史会话与验证码不迁移。
 6. 注册运营账户，在私有数据库中明确指定管理员；没有预设管理员密码或公开初始化接口。

@@ -8,7 +8,7 @@ for name in files:shutil.copy2(root/name,out/name)
 for directory in ['cloud','scripts']:
     shutil.copytree(root/directory,out/directory,dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
 shutil.copytree(root/'outputs/huanchang-v1',out/'outputs/huanchang-v1',dirs_exist_ok=True,ignore=shutil.ignore_patterns('qa','__pycache__','*.pyc'))
-for name in ['test_huanchang.py','test_readiness.py','test_cloud.py']:
+for name in ['test_huanchang.py','test_readiness.py','test_cloud.py','test_cloud_config.py']:
     (out/'tests').mkdir(exist_ok=True);shutil.copy2(root/'tests'/name,out/'tests'/name)
 (out/'tests/__init__.py').write_text('')
 for name in ['README.md','VERCEL-SUPABASE.md','.env.cloud.example','.env.example','Dockerfile','compose.yaml','Caddyfile']:

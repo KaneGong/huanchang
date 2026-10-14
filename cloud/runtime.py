@@ -5,7 +5,7 @@ import threading
 import ipaddress
 from contextlib import contextmanager
 from types import SimpleNamespace
-from urllib.parse import urlsplit,parse_qs
+from urllib.parse import urlsplit,parse_qs,quote
 from flask import Flask, request, Response
 from werkzeug.datastructures import Headers
 import huanchang_server as hc
@@ -100,6 +100,11 @@ def create_app(database=None,storage=None,origin=None,mail_sender=None,testing=F
             url=os.getenv('HUANCHANG_DATABASE_URL','');dsn=urlsplit(url)
             mode=parse_qs(dsn.query).get('sslmode',[''])[-1]
             if dsn.scheme not in ['postgres','postgresql'] or not dsn.hostname or mode not in ['require','verify-full']:raise ValueError('Database TLS missing')
+            password=os.getenv('HUANCHANG_DATABASE_PASSWORD','')
+            if password:
+                if not dsn.username:raise ValueError('Database user missing')
+                host=dsn.netloc.rsplit('@',1)[-1]
+                url=dsn._replace(netloc=dsn.username+':'+quote(password,safe='')+'@'+host).geturl()
             database=lambda:connect(url)
         storage=storage or Storage(os.getenv('HUANCHANG_SUPABASE_URL',''),os.getenv('HUANCHANG_SUPABASE_SERVICE_KEY',''),os.getenv('HUANCHANG_STORAGE_BUCKET','huanchang-media'))
         sender=mail_sender or SMTPDelivery()

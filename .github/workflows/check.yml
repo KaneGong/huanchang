@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '22'
       - run: pip install -r requirements.txt
-      - run: python -m unittest tests.test_readiness -v
+      - run: python -m unittest tests.test_readiness tests.test_cloud_config -v
       - run: python -m unittest tests.test_cloud -v
         env:
           HUANCHANG_TEST_DATABASE_URL: postgresql://postgres:isolated-ci-only@127.0.0.1:5432/postgres?sslmode=disable
