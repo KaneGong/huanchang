@@ -27,7 +27,7 @@
 
 <table><tr><td width="50%"><img src="docs/github/assets/work.png" alt="作品详情：图片、创作贡献与讨论" /></td><td width="50%"><img src="docs/github/assets/creator.png" alt="创作者主页：专长、作品与合作偏好" /></td></tr><tr><td align="center">从作品理解能力与创作贡献</td><td align="center">认识彼此的专长，找到合作的起点</td></tr></table>
 
-截图使用明确标示的演示内容，不展示真实用户资料或私信。页面是本机版本，在线地址在实际部署验收后补充。
+截图使用明确标示的演示内容，不展示真实用户资料或私信。截图为本机演示版本。香港小规模试用入口：[trial.aigcyard.cn](https://trial.aigcyard.cn/)。
 
 ## 我们希望解决什么
 
@@ -100,9 +100,9 @@
 | 层级 | 状态 |
 | --- | --- |
 | 本机基础社区 | 已完成本轮收口；原有基础及收口检查通过 |
-| Vercel＋Supabase 测试环境 | 基础真实流程已通过；国内直连未通过，原环境保留 |
+| Vercel＋Supabase 测试环境 | 原环境保留，已暂停并恢复访问保护；新试用数据以香港站为准 |
 | 上海阿里云内部部署 | ECS＋PostgreSQL17＋私有OSS迁移验收通过；aigcyard.com 备案已于10月14日提交，后续审核状态待核实 |
-| 正式公网切换 | 等待备案通过，之后完成最终同步、域名/HTTPS和真实国内网络验收 |
+| 香港公网试用 | [trial.aigcyard.cn](https://trial.aigcyard.cn/) 已开放；HTTPS、数据一致性、公网业务与独立恢复检查通过；用户反馈手机可打开且加载较快，完整操作待验收 |
 | 网站英文界面 | 尚未提供；本仓库介绍提供中文和英文 |
 
 ## 运行与部署
@@ -119,7 +119,7 @@ python3 huanchang_server.py --demo
 python3 -m unittest tests.test_readiness -v
 ```
 
-当前国内路线：**上海 ECS → PostgreSQL17＋私有 OSS**，已完成备案前内部迁移验收。维护与后续切换见 [阿里云部署说明](deployment/ALIYUN-STATUS.md)。备案通过前仅通过本机加密隧道访问。
+当前试用路线：**香港轻量服务器 → PostgreSQL17＋香港私有 OSS**，已开放 HTTPS 试用。上海 ECS 保留为备案通过后的迁回目标。维护、验收范围与后续切换见 [阿里云部署说明](deployment/ALIYUN-STATUS.md)。邮件服务尚未启用，请保存恢复码。
 
 原测试路线：**GitHub 管理代码 → Vercel 提供页面与接口 → Supabase 保存数据库和图片**。
 
