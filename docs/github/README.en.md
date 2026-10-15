@@ -25,7 +25,7 @@ HUANCHANG aims to be a place where these strengths meet. Through portfolios, cre
 
 <table><tr><td width="50%"><img src="docs/github/assets/work.png" alt="Work detail, creative contributions and discussion" /></td><td width="50%"><img src="docs/github/assets/creator.png" alt="Creator profile, skills, work and collaboration preferences" /></td></tr><tr><td align="center">Understand skills and contributions through the work</td><td align="center">Discover complementary strengths and a reason to collaborate</td></tr></table>
 
-Screenshots show labeled demo content, without real user profiles or private messages. They show a local build; a live URL will be added after deployment acceptance.
+Screenshots show labeled demo content, without real user profiles or private messages. They show a local demo build. The Hong Kong trial is available at [trial.aigcyard.cn](https://trial.aigcyard.cn/).
 
 ## Why HUANCHANG?
 
@@ -91,7 +91,7 @@ Warm off-white, deep green and restrained lime accents frame a flexible work wal
 
 ## Status
 
-The local foundation and basic Vercel/Supabase trial flows have passed their acceptance checks. Direct access from the user’s mainland mobile networks failed. The Shanghai ECS, PostgreSQL 17 and private OSS copy has passed internal migration checks; the aigcyard.com ICP filing application was submitted on October 14, 2026 ; the latest review outcome has not yet been rechecked. Public DNS/HTTPS cutover and mainland network acceptance remain pending. The website currently has a Chinese interface. This repository introduction is bilingual.
+The Hong Kong trial is open at [trial.aigcyard.cn](https://trial.aigcyard.cn/). HTTPS, final data consistency, registration, image uploads, publishing, comments, messages and isolated backup restoration have passed checks. The owner reports that the site opens on a phone with acceptable loading speed; the proxy setting and full phone workflow have not been confirmed. Email delivery is disabled; keep your recovery code. The original Vercel project is paused and access-protected. Shanghai remains an internal migration target while the aigcyard.com ICP application, submitted on October 14, 2026, is reviewed; its latest result has not been rechecked. The website interface is Chinese; this repository introduction is bilingual.
 
 ## Run and deploy
 
@@ -107,7 +107,7 @@ Open `http://127.0.0.1:8790/#/works`. Demo identity switching is restricted to l
 python3 -m unittest tests.test_readiness -v
 ```
 
-Current mainland architecture: **Shanghai ECS → PostgreSQL 17 and private OSS**, accessible through a local SSH tunnel while filing is pending. See [Alibaba Cloud deployment notes](deployment/ALIYUN-STATUS.md). The original trial environment remains **GitHub for source → Vercel for pages and endpoints → Supabase for PostgreSQL and private image storage**. Existing username accounts and optional email remain; signed direct uploads keep large image bodies away from function requests.
+Current trial architecture: **Hong Kong server → PostgreSQL 17 and private Hong Kong OSS**. Shanghai remains the future mainland target while filing is pending. See [Alibaba Cloud deployment notes](deployment/ALIYUN-STATUS.md). The original trial environment remains **GitHub for source → Vercel for pages and endpoints → Supabase for PostgreSQL and private image storage**. Existing username accounts and optional email remain; signed direct uploads keep large image bodies away from function requests.
 
 See the [deployment guide](deployment/VERCEL-SUPABASE.md). Never commit live account databases, user uploads, credentials or private development backups.
 
