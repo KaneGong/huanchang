@@ -1,6 +1,6 @@
 # 幻场部署准备
 
-当前部署状态请先看 [阿里云部署状态](ALIYUN-STATUS.md)。下文为此前的 SQLite 容器部署模板，不是已部署的上海 PostgreSQL/OSS 环境记录。
+当前部署状态请先看 [阿里云部署状态](ALIYUN-STATUS.md)。下文为此前的 SQLite 容器部署模板，不是已部署的香港或上海 PostgreSQL/OSS 环境记录。
 
 更新2026-10-14。Owner：Codex。提供可审阅模板，本轮未执行外部部署。当前电脑没有Docker/Caddy；已检查配置结构与服务行为，容器构建、实际HTTPS及公网运行仍须在选定环境验证。
 
