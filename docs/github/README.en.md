@@ -7,7 +7,7 @@
 
 ## Give imagination form. Bring people together.
 
-**HUANCHANG / 幻场** is a work-sharing and conversation community for AIGC creators, people who appreciate their work, and people with a creative idea. It helps work be discovered and creators with different strengths find one another and begin creating together.
+**AIGC Yard / 幻场** is a work-sharing and conversation community for AIGC creators, people who appreciate their work, and people with a creative idea. It helps work be discovered and creators with different strengths find one another and begin creating together.
 
 It is a place to build imagined worlds with AI, discover a compelling style or story, and meet the people who can bring an idea to life. A character, a screenplay, an image or a sound can become the beginning of a meaningful conversation.
 
@@ -91,7 +91,7 @@ Warm off-white, deep green and restrained lime accents frame a flexible work wal
 
 ## Status
 
-The local foundation has completed its current acceptance pass. The Vercel and Supabase adapter has passed its initial local regression; the preview database and private image bucket have been created, while Vercel configuration and deployment acceptance are in progress. The website currently has a Chinese interface. This repository introduction is bilingual.
+The local foundation and basic Vercel/Supabase trial flows have passed their acceptance checks. Direct access from the user’s mainland mobile networks failed. The Shanghai ECS, PostgreSQL 17 and private OSS copy has passed internal migration checks; the aigcyard.com ICP filing application was submitted on October 14, 2026 ; the latest review outcome has not yet been rechecked. Public DNS/HTTPS cutover and mainland network acceptance remain pending. The website currently has a Chinese interface. This repository introduction is bilingual.
 
 ## Run and deploy
 
@@ -107,7 +107,7 @@ Open `http://127.0.0.1:8790/#/works`. Demo identity switching is restricted to l
 python3 -m unittest tests.test_readiness -v
 ```
 
-Target architecture: **GitHub for source → Vercel for pages and endpoints → Supabase for PostgreSQL and private image storage**. Existing username accounts and optional email remain; signed direct uploads keep large image bodies away from function requests.
+Current mainland architecture: **Shanghai ECS → PostgreSQL 17 and private OSS**, accessible through a local SSH tunnel while filing is pending. See [Alibaba Cloud deployment notes](deployment/ALIYUN-STATUS.md). The original trial environment remains **GitHub for source → Vercel for pages and endpoints → Supabase for PostgreSQL and private image storage**. Existing username accounts and optional email remain; signed direct uploads keep large image bodies away from function requests.
 
 See the [deployment guide](deployment/VERCEL-SUPABASE.md). Never commit live account databases, user uploads, credentials or private development backups.
 
@@ -125,4 +125,4 @@ This repository makes its source visible while reserving rights to the project�
 
 ---
 
-<p align="center"><strong>HUANCHANG · 幻场</strong><br />Let imagination be seen, and its creators be found.</p>
+<p align="center"><strong>AIGC Yard · 幻场</strong><br />Let imagination be seen, and its creators be found.</p>
