@@ -8,7 +8,7 @@ About描述：
 
 建议Topics：`aigc`、`ai-art`、`creative-community`、`portfolio`、`creators`、`collaboration`、`alibaba-cloud`、`postgresql`、`python`。
 
-网站链接：部署验收后填写实际访问地址，现在不使用本机URL或猜测公网URL。
+网站链接：https://trial.aigcyard.cn/ （香港小规模试用）。
 
 README默认中文，README.en.md为英文；品牌封面使用docs/github/assets/cover.svg，三张演示截图同目录。不要用README中英文切换冒充网站已提供双语界面。
 
@@ -17,3 +17,5 @@ README默认中文，README.en.md为英文；品牌封面使用docs/github/asset
 首个发布说明建议：幻场基础社区首版，支持作品发现、专长与贡献呈现、合作意向表达、发布编辑、评论与作品关联私信，帮助创作者找到互补的伙伴并发起共同创作；以验收记录区分本机完成、云端适配与实际上线。
 
 2026-10-15：英文品牌为 AIGC Yard，仓库路径仍为 KaneGong/huanchang。计划主域名 aigcyard.com；备案已于10月14日提交，尚未完成正式公网切换，不把该域名标为已上线网站。上海内部部署已完成上一轮迁移验收；原 Vercel/Supabase 测试环境保留。
+
+2026-10-15 香港试用已开放：HTTPS 与公网基础流程通过，最终源数据一致并完成香港备份独立恢复；国内手机完整体验待验收。旧 Vercel 入口已恢复访问保护，试用数据以香港站为准。aigcyard.com 继续作为备案中的正式主域名。
