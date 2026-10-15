@@ -85,7 +85,7 @@ Complementary skills matter. Writing, visual development, directing, production,
 
 Collaboration starts with a concrete idea: what already exists, which partners are needed, and what people want to complete together.
 
-The first version provides free work discovery, skill presentation, partner discovery and communication. Payments, commissions, automatic matching, bilateral confirmation cards and private collaboration rooms are deferred.
+The current version focuses on validating work discovery, skill presentation, partner discovery and communication for collaborative creation. The business model and pricing approach are not yet determined. Payments, commissions, automatic matching, bilateral confirmation cards and private collaboration rooms are deferred.
 
 Warm off-white, deep green and restrained lime accents frame a flexible work wall and readable detail pages. Starlight moves around the homepage title; reduced-motion preferences preserve a readable static title.
 
